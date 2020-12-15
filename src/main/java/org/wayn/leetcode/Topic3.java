@@ -37,5 +37,30 @@ public class Topic3 {
             }
             return longestNum;
         }
+
+        // https://pic.leetcode-cn.com/36efcc3cc13acb0bc572a1ed9139b51cd00ad4502c70ac0a98d38c7de4765076-%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190516154813.png
+        public int lengthOfLongestSubstringo(String s) {
+            int i = 0;
+            int flag = 0;
+            int length = 0;
+            int result = 0;
+            while (i < s.length()) {
+                int pos = s.indexOf(s.charAt(i),flag);
+                if (pos < i) {
+                    if (length > result) {
+                        result = length;
+                    }
+                    if (result >= s.length() - pos - 1) {
+                        return result;
+                    }
+                    length = i - pos - 1;
+                    flag = pos + 1;
+                }
+                length++;
+                i++;
+            }
+            return length;
+        }
+
     }
 }
