@@ -1,14 +1,16 @@
 package org.wayn.leetcode;
 
+import sun.misc.Unsafe;
+
 public class Topic20 {
     public static void main(String[] args) {
-        System.out.println(Solution.isValid("()"));
-        System.out.println(Solution.isValid("()[]{}"));
-        System.out.println(Solution.isValid("(]"));
-        System.out.println(Solution.isValid("([)]"));
-        System.out.println(Solution.isValid("{[]}"));
-        System.out.println(Solution.isValid("}"));
-
+//        System.out.println(Solution.isValid("()"));
+//        System.out.println(Solution.isValid("()[]{}"));
+//        System.out.println(Solution.isValid("(]"));
+//        System.out.println(Solution.isValid("([)]"));
+//        System.out.println(Solution.isValid("{[]}"));
+//        System.out.println(Solution.isValid("}"));
+        Unsafe unsafe = Unsafe.getUnsafe();
     }
 
     static class Solution {
@@ -52,4 +54,25 @@ public class Topic20 {
             return parttens.length() == 0;
         }
     }
+
+    /**
+     * public boolean isValid(String s) {
+     *         if(s.isEmpty())
+     *             return true;
+     *         Stack<Character> stack=new Stack<Character>();
+     *         for(char c:s.toCharArray()){
+     *             if(c=='(')
+     *                 stack.push(')');
+     *             else if(c=='{')
+     *                 stack.push('}');
+     *             else if(c=='[')
+     *                 stack.push(']');
+     *             else if(stack.empty()||c!=stack.pop())
+     *                 return false;
+     *         }
+     *         if(stack.empty())
+     *             return true;
+     *         return false;
+     *     }
+     */
 }
