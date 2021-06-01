@@ -39,8 +39,31 @@ public class Topic8 {
     }
 
     static class Solution {
+        // 1.过滤前置空格
+        // 2. 处理极端情况
+        // 3. 处理符号
+        // 4、将后续出现的数字字符进行转换
+
+        /**
+         * 判断int是否越界的方法
+         * 1. last = res;
+         *    res = res * 10 + tem;
+         *    //如果不相等就是溢出了
+         *    if (last != res / 10)
+         *
+         * 2.
+         *   if (res > Integer.MAX_VALUE / 10 || (res == Integer.MAX_VALUE / 10 && (currChar - '0') > Integer.MAX_VALUE % 10)) {
+         *       return Integer.MAX_VALUE;
+         *   }
+         *   if (res < Integer.MIN_VALUE / 10 || (res == Integer.MIN_VALUE / 10 && (currChar - '0') > -(Integer.MIN_VALUE % 10))) {
+         *       return Integer.MIN_VALUE;
+         *   }
+
+         * @param s
+         * @return
+         */
         public static int myAtoi(String s) {
-            long result = 0;
+            int result = 0;
             boolean flag = false;
             int sign = 0;
             final List<String> intList = Arrays.asList("0" , "1" , "2" , "3" , "4" , "5" ,"6" , "7" , "8" , "9");
