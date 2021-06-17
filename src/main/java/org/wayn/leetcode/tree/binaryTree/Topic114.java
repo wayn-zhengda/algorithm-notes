@@ -1,6 +1,7 @@
-package org.wayn.leetcode.tree;
+package org.wayn.leetcode.tree.binaryTree;
 
 import org.wayn.leetcode.Node;
+import org.wayn.leetcode.tree.TreeNode;
 
 public class Topic114 {
 

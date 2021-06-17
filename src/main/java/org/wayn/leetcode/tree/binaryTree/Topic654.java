@@ -1,4 +1,6 @@
-package org.wayn.leetcode.tree;
+package org.wayn.leetcode.tree.binaryTree;
+
+import org.wayn.leetcode.tree.TreeNode;
 
 import java.util.Arrays;
 

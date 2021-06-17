@@ -1,7 +1,5 @@
 package org.wayn.leetcode;
 
-import org.wayn.leetcode.tree.Topic116;
-
 public class Node {
     public int val;
     public Node left;
